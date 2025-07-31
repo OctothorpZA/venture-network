@@ -46,10 +46,10 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <ProfileCard
-              name="Mansoer Gallie"
-              role="Systems & Infrastructure"
-              bio="Founder of Octothorp ITWS and a seasoned systems architect with a passion for building robust, scalable infrastructure."
-              imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=MG"
+              name="Mikhail Robertson"
+              role="CEO & Business Strategy Partner"
+              bio="With Years of Commerce background experiece, Mikhail bridges the gap between technology and business, focusing on strategic planning and growth."
+              imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=MR"
             />
             <ProfileCard
               name="Jodi A. Adams"
@@ -58,10 +58,10 @@ export default function AboutPage() {
               imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=JA"
             />
             <ProfileCard
-              name="Mikhail Robertson"
-              role="Business Strategy Partner"
-              bio="With Years of Commerce background experiece, Mikhail bridges the gap between technology and business, focusing on strategic planning and growth."
-              imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=MR"
+              name="Mansoer Gallie"
+              role="Information Systems & Infrastructure"
+              bio="Founder of Octothorp ITWS and a seasoned systems architect with a passion for building robust, scalable infrastructure."
+              imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=MG"
             />
           </div>
         </div>
