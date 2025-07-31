@@ -4,6 +4,7 @@ import ServicesSection from '@/components/sections/homepage/ServicesSection';
 import FeaturedWorkSection from '@/components/sections/homepage/FeaturedWorkSection';
 import ProcessSection from '@/components/sections/homepage/ProcessSection';
 import TestimonialSection from '@/components/sections/homepage/TestimonialSection';
+import FinalCtaSection from '@/components/sections/homepage/FinalCtaSection';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <FeaturedWorkSection />
       <ProcessSection />
       <TestimonialSection />
-      {/* Other homepage sections will be added here in future sprints */}
+      <FinalCtaSection />
     </>
   );
 }
