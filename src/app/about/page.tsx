@@ -60,7 +60,7 @@ export default function AboutPage() {
             <ProfileCard
               name="Mikhail Robertson"
               role="Business Strategy Partner"
-              bio="With a BCom background, Mikhail bridges the gap between technology and business, focusing on strategic planning and growth."
+              bio="With Years of Commerce background experiece, Mikhail bridges the gap between technology and business, focusing on strategic planning and growth."
               imageUrl="https://placehold.co/200x200.png/E0E1DD/415A77?text=MR"
             />
           </div>
