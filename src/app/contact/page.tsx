@@ -1,10 +1,39 @@
+'use client';
+
 import React from 'react';
+// Corrected: useActionState is now imported from 'react'
+import { useActionState } from 'react';
+// useFormStatus is still correctly imported from 'react-dom'
+import { useFormStatus } from 'react-dom';
+import { submitContactForm, type FormState } from './actions';
+
+const initialState: FormState = {
+  message: '',
+  error: false,
+};
+
+// A dedicated submit button component to access the form's pending state
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button 
+      type="submit"
+      disabled={pending}
+      className="bg-[--color-brand-tangerine] text-[--color-oxford-blue] font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors w-full disabled:bg-opacity-50 disabled:cursor-not-allowed"
+    >
+      {pending ? 'Submitting...' : 'Submit'}
+    </button>
+  );
+}
 
 /**
- * Renders the Contact Us page with a form and direct contact information.
- * Note: The form is for visual purposes only in this sprint.
+ * Renders the Contact Us page with a functional form.
  */
 export default function ContactPage() {
+  // Corrected: Renamed useFormState to useActionState
+  const [state, formAction] = useActionState(submitContactForm, initialState);
+
   return (
     <>
       {/* Page Header */}
@@ -24,13 +53,14 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <div>
-              <form>
+              <form action={formAction}>
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-[--color-oxford-blue] font-bold mb-2">Name</label>
                   <input 
                     type="text" 
                     id="name" 
                     name="name" 
+                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[--color-brand-tangerine]"
                   />
                 </div>
@@ -40,6 +70,7 @@ export default function ContactPage() {
                     type="email" 
                     id="email" 
                     name="email" 
+                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[--color-brand-tangerine]"
                   />
                 </div>
@@ -49,16 +80,17 @@ export default function ContactPage() {
                     id="message" 
                     name="message" 
                     rows={6}
+                    required
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[--color-brand-tangerine]"
                   ></textarea>
                 </div>
-                <button 
-                  type="submit"
-                  className="bg-[--color-brand-tangerine] text-[--color-oxford-blue] font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors w-full"
-                >
-                  Submit
-                </button>
+                <SubmitButton />
               </form>
+              {state.message && (
+                <p className={`mt-4 text-center p-2 rounded-lg ${state.error ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                  {state.message}
+                </p>
+              )}
             </div>
 
             {/* Direct Contact Info */}
