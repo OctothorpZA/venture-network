@@ -31,7 +31,7 @@ export async function submitContactForm(
   // Construct the email
   const sendSmtpEmail = new brevo.SendSmtpEmail();
   sendSmtpEmail.subject = `New Contact Form Submission from ${name}`;
-  sendSmtpEmail.to = [{ email: 'VNetwork@oitw.site' }]; // IMPORTANT: Replace with your actual recipient email
+  sendSmtpEmail.to = [{ email: 'support@oitw.site' }]; // IMPORTANT: Replace with your actual recipient email
   sendSmtpEmail.htmlContent = `
     <html>
       <body>
