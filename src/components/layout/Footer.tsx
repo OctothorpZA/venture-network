@@ -21,7 +21,7 @@ const legalLinks = [
  */
 const Footer = () => {
   return (
-    <footer className="bg-oxfordBlue text-brand-platinum font-sans">
+    <footer className="bg-[--color-oxford-blue] text-[--color-brand-platinum]">
       <div className="container mx-auto px-6 py-12">
         {/* Main footer content with responsive grid layout */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Company Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-xl font-bold tracking-wider mb-4">Venture Network</h3>
-            <p className="text-brand-platinum/80 pr-4">
+            <p className="text-[--color-brand-platinum]/80 pr-4">
               Expert-Led Growth Partner: Aligning technology strategy with hands-on execution.
             </p>
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-brand-platinum/80 hover:text-brand-tangerine transition-colors">
+                  <Link href={link.href} className="text-[--color-brand-platinum]/80 hover:text-[--color-brand-tangerine] transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -54,15 +54,15 @@ const Footer = () => {
             <ul className="space-y-2">
               {legalLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-brand-platinum/80 hover:text-brand-tangerine transition-colors">
+                  <Link href={link.href} className="text-[--color-brand-platinum]/80 hover:text-[--color-brand-tangerine] transition-colors">
                     {link.name}
                   </Link>
                 </li>
               ))}
               {/* Socials can be added here or in a new column */}
               <li className="pt-4 font-bold">Socials</li>
-              <li><span className="text-brand-platinum/80">LinkedIn</span></li>
-              <li><span className="text-brand-platinum/80">Twitter</span></li>
+              <li><span className="text-[--color-brand-platinum]/80">LinkedIn</span></li>
+              <li><span className="text-[--color-brand-platinum]/80">Twitter</span></li>
             </ul>
           </div>
 
@@ -70,8 +70,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-shadowBlue/50 mt-8">
-        <div className="container mx-auto px-6 py-4 text-center text-sm text-brand-platinum/60">
+      <div className="border-t border-[--color-shadow-blue]/50 mt-8">
+        <div className="container mx-auto px-6 py-4 text-center text-sm text-[--color-brand-platinum]/60">
           <p>© 2025 Venture Network. All Rights Reserved.</p>
         </div>
       </div>

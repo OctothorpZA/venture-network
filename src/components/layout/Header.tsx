@@ -21,7 +21,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-oxfordBlue text-brand-platinum font-sans">
+    <header className="bg-[--color-oxford-blue] text-[--color-brand-platinum]">
       <nav className="container mx-auto flex items-center justify-between p-6">
         {/* Logo */}
         <div className="text-xl font-bold tracking-wider">
@@ -31,7 +31,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="hover:text-brand-tangerine transition-colors">
+            <Link key={link.name} href={link.href} className="hover:text-[--color-brand-tangerine] transition-colors">
               {link.name}
             </Link>
           ))}
@@ -55,7 +55,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-oxfordBlue z-50 flex flex-col items-center justify-center">
+        <div className="md:hidden fixed inset-0 bg-[--color-oxford-blue] z-50 flex flex-col items-center justify-center">
           <button onClick={() => setIsMenuOpen(false)} className="absolute top-6 right-6" aria-label="Close navigation menu">
              <svg
                 className="w-6 h-6"
@@ -72,7 +72,7 @@ const Header = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-2xl hover:text-brand-tangerine transition-colors"
+                className="text-2xl hover:text-[--color-brand-tangerine] transition-colors"
                 onClick={() => setIsMenuOpen(false)} // Close menu on link click
               >
                 {link.name}

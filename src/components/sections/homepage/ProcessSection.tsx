@@ -6,9 +6,9 @@ import React from 'react';
 const ProcessStep = ({ number, title, description }: { number: string; title: string; description: string }) => (
   <div className="relative flex-1">
     <div className="flex flex-col items-center text-center md:items-start md:text-left">
-      <span className="text-5xl font-bold text-brand-tangerine mb-4">{number}</span>
-      <h3 className="text-xl font-bold text-oxfordBlue mb-2">{title}</h3>
-      <p className="text-shadowBlue/80">{description}</p>
+      <span className="text-5xl font-bold text-[--color-brand-tangerine] mb-4">{number}</span>
+      <h3 className="text-xl font-bold text-[--color-oxford-blue] mb-2">{title}</h3>
+      <p className="text-[--color-shadow-blue]/80">{description}</p>
     </div>
   </div>
 );
@@ -19,21 +19,20 @@ const ProcessStep = ({ number, title, description }: { number: string; title: st
  */
 const ProcessSection = () => {
   return (
-    <section className="bg-brand-platinum py-20 md:py-24">
+    <section className="bg-[--color-brand-platinum] py-20 md:py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-oxfordBlue">
+          <h2 className="text-3xl md:text-4xl font-bold text-[--color-oxford-blue]">
             A Clear Path to Success
           </h2>
-          {/* Corrected the unescaped apostrophe in "project's" to "project&apos;s" */}
-          <p className="text-lg md:text-xl text-shadowBlue mt-4 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-[--color-shadow-blue] mt-4 max-w-3xl mx-auto">
             Our process is designed for clarity and results. We collaborate with you at every step to ensure your project&apos;s success.
           </p>
         </div>
 
         <div className="relative flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
           {/* Decorative connecting line for desktop */}
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-shadowBlue/30 transform -translate-y-1/2" style={{top: 'calc(1.25rem)'}}></div>
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-[--color-shadow-blue]/30 transform -translate-y-1/2" style={{top: 'calc(1.25rem)'}}></div>
           
           <ProcessStep 
             number="01"

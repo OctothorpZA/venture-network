@@ -16,9 +16,9 @@ const ProjectCard = ({ title, description, imageUrl, slug }: { title: string; de
         className="w-full object-cover transform group-hover:scale-105 transition-transform duration-300"
       />
     </div>
-    <div className="p-6 bg-shadowBlue/20">
-      <h3 className="text-xl font-bold text-brand-platinum mb-2">{title}</h3>
-      <p className="text-brand-platinum/80">{description}</p>
+    <div className="p-6 bg-[--color-shadow-blue]/20">
+      <h3 className="text-xl font-bold text-[--color-brand-platinum] mb-2">{title}</h3>
+      <p className="text-[--color-brand-platinum]/80">{description}</p>
     </div>
   </Link>
 );
@@ -29,14 +29,13 @@ const ProjectCard = ({ title, description, imageUrl, slug }: { title: string; de
  */
 const FeaturedWorkSection = () => {
   return (
-    <section className="bg-oxfordBlue py-20 md:py-24">
+    <section className="bg-[--color-oxford-blue] py-20 md:py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-platinum">
+          <h2 className="text-3xl md:text-4xl font-bold text-[--color-brand-platinum]">
             Transforming Ideas into Reality
           </h2>
-          {/* Corrected the unescaped apostrophe in "we've" to "we&apos;ve" */}
-          <p className="text-lg md:text-xl text-brand-platinum/80 mt-4 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[--color-brand-platinum]/80 mt-4 max-w-2xl mx-auto">
             Here is a selection of our work. See how we&apos;ve helped businesses like yours achieve their goals.
           </p>
         </div>
