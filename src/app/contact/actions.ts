@@ -31,7 +31,7 @@ export async function submitContactForm(
   // Construct the email
   const sendSmtpEmail = new brevo.SendSmtpEmail();
   sendSmtpEmail.subject = `New Contact Form Submission from ${name}`;
-  sendSmtpEmail.to = [{ email: 'VNetwork@oitw.site' }]; // IMPORTANT: Replace with your actual recipient email
+  sendSmtpEmail.to = [{ email: 'Support@oitw.site' }]; // IMPORTANT: Replace with your actual recipient email
   sendSmtpEmail.htmlContent = `
     <html>
       <body>
@@ -43,7 +43,7 @@ export async function submitContactForm(
       </body>
     </html>
   `;
-  sendSmtpEmail.sender = { name: 'Venture Network | Support', email: 'support@oitw.site' }; // IMPORTANT: Replace with a verified sender email in Brevo
+  sendSmtpEmail.sender = { name: 'Venture Network | Support', email: 'VNetwork@oitw.site' }; // IMPORTANT: Replace with a verified sender email in Brevo
 
   try {
     await api.sendTransacEmail(sendSmtpEmail);
