@@ -43,7 +43,7 @@ export async function submitContactForm(
       </body>
     </html>
   `;
-  sendSmtpEmail.sender = { name: 'Venture Network Website', email: 'support@oitw.site' }; // IMPORTANT: Replace with a verified sender email in Brevo
+  sendSmtpEmail.sender = { name: 'Venture Network Website', email: 'VNetwork@oitw.site' }; // IMPORTANT: Replace with a verified sender email in Brevo
 
   try {
     await api.sendTransacEmail(sendSmtpEmail);
